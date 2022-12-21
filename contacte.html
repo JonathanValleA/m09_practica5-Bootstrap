@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Landing Page - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <!-- css -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Navigation-->
+        <!-- Agregar la misma barra de navegacion que el index.html -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light position-sticky top-0" style="z-index:1">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="MenuNavegacion" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Característiques</a></li>
+                        <li class="nav-item"><a href="contacte.html" class="nav-link active">Contacte</a></li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav mr-auto">
+                    <i class="bi bi-box-arrow-right"></i>
+                </ul>
+            </div>
+        </nav>
+        <!-- Definir Formulario de Envio de Contacto -->
+        <!-- Definir un contenedor para añadir margenes y centrarlo mejor -->
+        <div class="container">
+            <!-- Definir las fila (En este caso solo 1) -->
+            <div class="row mt-3">
+                <!-- Definir las columnas (En este caso solo 1) -->
+                <div class="col">
+                    <!-- Empezar a maquetear el formulario-->
+                    <form action="">
+                        <!-- Definir nuevamente las filas que habran(En este caso 3 filas) -->
+                        <div class="row">
+                            <!-- Definir las columnas que habran (En este caso 8 columnas) -->
+                            <!-- En la primera fila, habran 2 columnas que ocupan 6 (6+6=12) -->
+                            <div class="col-6">
+                                <!-- El type del input de esta fila son de tipo texto y campo requerido -->
+                                <label for="nombre" class="form-label">Nom*</label>
+                                <input type="text" class="form-control" placeholder="Nombre" id="nombre" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="cognom" class="form-label">Cognoms*</label>
+                                <input type="text" class="form-control" placeholder="Cognoms" id="cognom" required>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <!-- En la segunda fila habra 2 columnas de neuva que ocupen 6 (6+6=12) -->
+                            <div class="col-6">
+                                <!-- El type del input de esta fila son de tipo email (Para que de esta forma no se envie algo que sea texto, sino un email con su estructura y su dominio y campo requerido) -->
+                                <label for="email" class="form-label">Correo electrònic*</label>
+                                <input type="email" class="form-control" placeholder="correo electrònic.." id="email" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="password" class="form-label">Password*</label>
+                                <input type="password" class="form-control" placeholder="Password.." id="passwd" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- En la 3r fila solamente habra 1 columna que ocupe todo (12=12) -->
+                            <div class="col-12 mt-5">
+                                <label for="adreça" class="form-label">Adreça*</label>
+                                <input type="adreça" class="form-control" placeholder="Adreça.." id="addr" required>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <!-- En la 4t fila, habra 3 columnas que sera el pais, la ciudad y el C.P -->
+                            <!-- Ocupara cada columna 4 para tener 3 columnas en 1 fila (4+4+4 = 12) -->
+                            <div class="col-4">
+                                <!-- En el select -->
+                                <label for="pais" class="form-label">Pais*</label>
+                                <select name="select" class="form-select" required>
+                                    <!-- La primera option es por defecto y no se puede escoger -->
+                                    <option value="" selected disabled hidden>Seleccione un Pais</option>
+                                    <option value="spain">España</option>
+                                    <option value="rusia">Rusia</option>
+                                    <option value="china">China</option>
+                                    <option value="estadosUnidos">Estados Unidos</option>
+                                    <option value="canada">Canadà</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="ciutat" class="form-label">Ciutat*</label>
+                                <select name="select" class="form-select" required>
+                                    <!-- La primera option es por defecto y no se puede escoger -->
+                                    <option value="" selected disabled hidden>Seleccione una Ciudad</option>
+                                    <option value="barcelona">Barcelona</option>
+                                    <option value="moscu">Moscu</option>
+                                    <option value="pekín">Pekín</option>
+                                    <option value="nuevaYork">Nueva York</option>
+                                    <option value="toronto">Toronto</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="cp" class="form-label">C.P.*</label>
+                                <input type="text" class="form-control" placeholder="C.P.." id="cp" required>
+                            </div>
+                            <!-- Y por ultimo dentro de la misma fila, habra un checkox para aceptar las condiciones -->
+                            <!-- el type del input tiene que ser checkbox y que sea campo requerido -->
+                            <div class="mt-4 form-check mx-3">
+                                <input class="form-check-input" type="checkbox" required>
+                                <label for="condicions" class="form-label mx-2">Accepto les condicions*</label>
+                            </div>
+                        </div>
+                        <!-- Por ultimo definimos el boton para enviar el formulario -->
+                        <!-- Y tambien definimos los estilos del boton -->
+                        <button type="submit" class="btn btn-dark col-2 mt-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

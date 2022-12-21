@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Landing Page - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <!-- css -->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-md navbar-light bg-light position-sticky top-0" style="z-index:1;">
+            <!-- Definimos un contenedor pero con el fluid (Simplemente no dejamos margenes y no lo centramos como un contenedor normal) -->
+            <div class="container-fluid"> 
+                <!-- La clase navbar-toggle es el icono menu responsive que aparecera con sus menus dentros-->
+                <!-- El data-bs-toggle es para poder abrir el menu junto el data-bs-target y le pasamos un id que sera para poder llamar al navbar -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+                    <!-- Definimos el icono del menu -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Llamamos al id ya definida para abrir el menu y la clase collapse navbar-collapse es para que solo aparezca el la lista del navbar al abrir el menu -->
+                <div id="MenuNavegacion" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Característiques</a></li>
+                        <li class="nav-item"><a href="contacte.html" class="nav-link">Contacte</a></li>
+                    </ul>
+                </div>
+                <!-- Fuera del menu, creamos un icono para posicionarlo a la derecha -->
+                <ul class="navbar-nav mr-auto">
+                    <i class="bi bi-box-arrow-right"></i>
+                </ul>
+            </div>
+        </nav>
+            <!-- En mi carousel definimos un id para pasar las imagenes con un data-bs-ride -->
+            <div class="carousel slide"  id="mi-carousel" data-bs-ride="carousel">
+                <!-- Definimos los indicadores del todal de las imagenes de mi carousel -->
+                <div class="carousel-indicators">
+                 <!-- Como tenemos 3 imagenes, habra 3 botones y le pasamos el id definido y el data-bs-slide-to para indicar las imagenes que hay comenzando del 0 -->
+                 <!-- Eso sera por cada imagen cambiada, el indicador tambien se cambiara a la siguiente -->
+                  <button type="button" data-bs-target="#mi-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#mi-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#mi-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <!-- El carousel-item es para decir cuantos items o imagene tendremos -->
+                  <!-- El active para indicar que la 1r imagen sera la principal -->
+                  <!-- Importante definir el active en una de las imagenes porque sino no se mostrara ninguna imagen -->
+                  <div class="carousel-item active">
+                    <!-- Decimos que ocupe un width de 100 -->
+                    <img src="img/img1.jpg" class="w-100" alt="Imagen 1...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img2.jpg" class="w-100" alt="Imagen 2...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img3.jpg" class="w-100" alt="Imagen 3...">
+                  </div>
+                </div>
+                <!-- Agregamos los 2 controladores prev y next para cambiar de imagen -->
+                <!-- El primer controlador para pasar al anterior imagen y le pasamos el id y el prev -->
+                <button class="carousel-control-prev" type="button" 
+                data-bs-target="#mi-carousel" data-bs-slide="prev">
+                  <!-- Mostramos el icono para pasar al anterior imagen -->
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <!-- Si no quieres un icono, pones texto normal y funcionara igual, en mi caso lo oculto con un visually-hidden -->
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <!-- Y lo mismo para el otro controlador para pasar al Siguiente imagen -->
+                <!-- Se cambia el prev por next -->
+                <button class="carousel-control-next" type="button" data-bs-target="#mi-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+              </div>
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Modificar las columnas ya que hay 3 secciones nuevas -->
+                    <!-- Al haber 6 secciones, las columnas se reparten entre 2 para que quepan -->
+                    <!-- En tamaño pequeño, las columnas/secciones abarcan 12 -->
+                    <div class="col-lg-2 col-12">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                            <h3>Fully Responsive</h3>
+                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-12">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                            <h3>Bootstrap 5 Ready</h3>
+                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-12">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Easy to Use</h3>
+                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        </div>
+                    </div>
+                    <!-- Agregada 3 nuevas secciones -->
+                    <div class="col-lg-2 col-12">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Section Add</h3>
+                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-12">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Section Add</h3>
+                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-12">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Section Add</h3>
+                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECCION CARACTERÍSTIQUES -->
+        <section class="container"> <!-- Definimos el contenedor de la tabla-->
+            <div class="row"> <!-- Definimos una fina -->
+                <!-- Definimos el flex-box -->
+                <!-- En el tamaño de 1200px y 992 aplicame el flex, en el tamaño de menos de 992
+                aplicame un row y ponme cada columna en una linea -->
+                <div class="d-xl-flex d-lg-flex d-md-row">
+                    <!-- Definimos el tamaño de columna dependiendo del tamaño de la pagina -->
+                    <div class="col-xl-7 col-lg-6 col-md-12">
+                        <!-- Indicamo que sea una tabla con la clase table y que sea responsive -->
+                        <!-- Decimos un hover cada vez que se pase por un td y que se añada rayas en cada fila de la tabla -->
+                        <table class="table table-responsive table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Característiques</th>
+                                    <th>Descrpció</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fully Responsive</td>
+                                    <td>This theme will look great on any device, no matter the size!</td>
+                                </tr>
+                                <tr>    
+                                    <td>Bootstrap 5 Ready</td>
+                                    <td>Featuring the latest build of the new Bootstrap 5 framework!</td>
+                                </tr>
+                                <tr>
+                                    <td>Easy to Use</td>
+                                    <td>Ready to use with your own content, or customize the source files!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Definimos el tamaño de columnas para la 2 columna dependiendo de lo que este haciendo el flex-box -->
+                    <!-- mx y my para separar esta columna de la otra y que no este junta en los tamaños de 1200 y 992px -->
+                    <!-- Cuando esta columna abarca 12 columnas y se ponga abajo ya no me apliques ningun mx y my -->
+                    <div class="col-xl-4 col-lg-5 col-md-12 mx-xl-4 mx-lg-4">
+                        <h2>Lorem ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quos necessitatibus autem, itaque mollitia consequuntur. Sit qui, ducimus cum harum saepe delectus voluptate unde optio commodi magni aliquam itaque ullam laudantium quod soluta vero reiciendis!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Image Showcases-->
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Fully Responsive Design</h2>
+                        <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Updated For Bootstrap 5</h2>
+                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Easy to Use & Customize</h2>
+                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <ul class="list-inline mb-2">
+                            <li class="list-inline-item"><a href="#!">About</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Contact</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
+                        </ul>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
